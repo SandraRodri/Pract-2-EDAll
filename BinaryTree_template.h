@@ -6,6 +6,9 @@
  * Especifique el tipo árbol de decisión binario
  */
 typedef struct _BinaryTree {
+char data[50];
+struct _BinaryTree* left;
+struct _BinaryTree* right;
 } BinaryTree;
 
 /*
@@ -13,11 +16,13 @@ typedef struct _BinaryTree {
  * Implemente el árbol de decisión binario en C.
  */
 BinaryTree* create_empty_tree();
-BinaryTree* create_tree(BinaryTree* left, char* content, BinaryTree* right); 
+BinaryTree* create_tree(BinaryTree* left, char* content, BinaryTree* right); //principal
+
 BinaryTree* left_tree(BinaryTree* tree); 
 BinaryTree* right_tree(BinaryTree* tree); 
 char* get_content(BinaryTree* tree); 
 int is_empty(BinaryTree* tree);
+
 
 /*
  * Tarea 3
