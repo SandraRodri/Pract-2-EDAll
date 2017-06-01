@@ -1,3 +1,5 @@
+#include <string.h>
+
 #ifndef BINARYTREE_H
 #define BINARYTREE_H
 
