@@ -19,6 +19,7 @@ struct _BinaryTree* right;
  */
 BinaryTree* create_empty_tree();
 BinaryTree* create_tree(BinaryTree* left, char* content, BinaryTree* right); //principal
+BinaryTree* tree_names();
 
 BinaryTree* left_tree(BinaryTree* tree); 
 BinaryTree* right_tree(BinaryTree* tree); 
