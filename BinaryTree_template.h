@@ -1,4 +1,7 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include "constantes.h"
 
 #ifndef BINARYTREE_H
 #define BINARYTREE_H
