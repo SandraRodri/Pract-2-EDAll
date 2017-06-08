@@ -97,3 +97,18 @@ BinaryTree* left_tree(BinaryTree* tree){
 BinaryTree* right_tree(BinaryTree* tree){
         return tree->right; 
 }
+
+void print_tree(BinaryTree* tree){
+    if(tree->left == NULL && tree->rigth == NULL){
+        printf("La respuesta es %s", tree->data);
+        return;
+    }
+    else{
+        printf("Si la respuesta a la pregunta %s: SI", tree->data);
+        print_tree(left_tree(tree));
+        printf("Si la respuesta a la pregunta %s: NO", tree->data);
+        print_tree(right_tree(tree));
+    }
+}
+
+
