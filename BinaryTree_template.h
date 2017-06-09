@@ -11,7 +11,7 @@
  * Especifique el tipo árbol de decisión binario
  */
 typedef struct _BinaryTree {
-char data[50];
+char* data;
 struct _BinaryTree* left;
 struct _BinaryTree* right;
 } BinaryTree;
@@ -51,3 +51,4 @@ BinaryTree* create_example2();
 BinaryTree* create_tree_from_string(char* strTree);
 
 #endif
+
