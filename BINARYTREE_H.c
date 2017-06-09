@@ -1,17 +1,20 @@
 #include "BinaryTree_template.h"
 #include "constantes.h"
 
-
-BinaryTree* create_empty_tree(){
+//Reservamos espacio en la memoria para poder crear un arbol (de un solo nodo)
+BinaryTree* create_empty_tree(){ 
     
     BinaryTree *tree = (BinaryTree*) malloc(sizeof (BinaryTree));
     
-    tree->left=NULL;
+    tree->left=NULL;  
     tree->right = NULL;
     
     return tree;
 }
 
+//Función principal del código, una vez reservada la memoria,creamos el arbol de tantas dimensiones como se desee, en nuestro caso, seran arboles fijos.
+//Esto es posible porque cada arbol( de un solo nodo)se va entrelazando a izquierda y derecha con los demás. 
+//Además, cada nodo tiene un data asignado,en este caso, son las preguntas o respuestas de los arboles que implementamos más adelante. 
 BinaryTree* create_tree(BinaryTree* left, char* content, BinaryTree* right){
     BinaryTree *tree;
     tree = create_empty_tree();
@@ -22,6 +25,7 @@ BinaryTree* create_tree(BinaryTree* left, char* content, BinaryTree* right){
     return tree;
 }
 
+//Implementación del primer arbol(comida).Fijamos el arbol.
 BinaryTree* create_example1(){
     BinaryTree *root, *tree_left, *tree_right, *aux;
     char* test;
@@ -46,7 +50,7 @@ BinaryTree* create_example1(){
     
     return root;
 }
-                       
+//Implementación del segundo arbol(comida).Fijamos el arbol.                       
 BinaryTree* create_example2(){
     BinaryTree *root, *tree_left, *tree_right, *aux;
     
@@ -79,6 +83,7 @@ BinaryTree* create_example2(){
     return root;
 }
 
+//Comprueba si el arbol(nodo)esta vacío devolviendo un booleano.Si estaba vacío devuelve TRUE(1) o FALSE(0), si está lleno.
 int is_empty(BinaryTree* tree){
     if(tree == NULL){
         return 1;
@@ -92,14 +97,25 @@ char* get_content(BinaryTree* tree){
     return tree->data;
 }                             
 
+//Devolvemos la parte izquierda del arbol
 BinaryTree* left_tree(BinaryTree* tree){
         return tree->left; 
 }
-                       
+
+//DEvolvemos la parte derecha del arbol
 BinaryTree* right_tree(BinaryTree* tree){
         return tree->right; 
 }
 
+//Tabulación para poder visualizar mejor las profunfidades del arbol
+void tabular(int profundidad){
+    int i;
+    for(i=0; i<profundidad; i++){
+        printf("\t");
+    } 
+}
+//Mostrar las preguntas y respuesta que se encuentran a cada nodo del arbol correspondiente,de manera recursiva, 
+//comprueba q no sea el ultimo elemeto en el caso de no serlo vamos a ambods lados del arbol
 void print_content(BinaryTree* tree, int profundidad){
     tabular(profundidad);
     if(tree->left == NULL && tree->right == NULL){
@@ -118,12 +134,7 @@ void print_content(BinaryTree* tree, int profundidad){
     }  
 }
 
-void tabular(int profundidad){
-    int i;
-    for(i=0; i<profundidad; i++){
-        printf("\t");
-    } 
-}
+// Mostramos por pantalla el arbol con todo su contenido en el caso de que esté lleno; si no es así advetimos al usuario que no existe el arbol.
 void print_tree(BinaryTree* tree){
     if(tree == NULL){
         printf("No tenemos arbol que mostrar");
@@ -133,7 +144,7 @@ void print_tree(BinaryTree* tree){
         print_content(tree, 0);
     }
 }
-
+// El usuario elige como recorrer el arbol segun sus respuestas.según la respuesta que ha introducido el usuario (Si o No)
 void print_manual_tree(BinaryTree* tree) {
     char opcion[50];
     if (is_empty(tree) == 0) {
@@ -151,6 +162,6 @@ void print_manual_tree(BinaryTree* tree) {
         printf("%s\n", tree->data);
     } 
     else {
-        printf("El arbol esta vacio\n");
+        printf("El arbol esta vacío\n");
     }
 }
