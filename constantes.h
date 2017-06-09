@@ -1,4 +1,9 @@
+//Variables globales del
+#define TRUE 1
+#define FALSE 0
+#define MAXLENGT 50
 
+//Variables del primer arbol
 #define TREE1_1 "Are you vegetarian?"
 #define TREE1_2 "Do you like tomatoes?"
 #define TREE1_3 "Do you like olive oil?"
@@ -13,7 +18,7 @@
 #define TREE1_13 "I suggest chicken tikka"
 #define TREE1_14 "I suggest fried chicken"
 
-
+//Variables del segundo arbol
 #define TREE2_1 "Is your age <= 16?"
 #define TREE2_2 "Is you age > 16 and <= 50?"
 #define TREE2_3 "Do you like suspense?"
