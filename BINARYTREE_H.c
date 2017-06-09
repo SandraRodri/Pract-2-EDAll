@@ -1,5 +1,4 @@
 #include "BinaryTree_template.h"
-#include "constantes.h"
 
 //Reservamos espacio en la memoria para poder crear un arbol (de un solo nodo)
 
