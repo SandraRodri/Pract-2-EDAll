@@ -21,9 +21,7 @@ struct _BinaryTree* right;
  * Implemente el árbol de decisión binario en C.
  */
 BinaryTree* create_empty_tree();
-BinaryTree* create_tree(BinaryTree* left, char* content, BinaryTree* right); //principal
-BinaryTree* tree_names1();
-BinaryTree* tree_names2();
+BinaryTree* create_tree(BinaryTree* left, char* content, BinaryTree* right);
 
 BinaryTree* left_tree(BinaryTree* tree); 
 BinaryTree* right_tree(BinaryTree* tree); 
@@ -37,6 +35,9 @@ int is_empty(BinaryTree* tree);
  *  de forma apropiada el árbol.
  */
 void print_tree(BinaryTree* tree);
+void print_content(Binary* tree, int profundidad);
+void tabular(int profundidad);
+
 
 /*
  * Tarea 4
