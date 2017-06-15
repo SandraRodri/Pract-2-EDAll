@@ -1,7 +1,7 @@
 //Variables globales del
 #define TRUE 1
 #define FALSE 0
-#define MAXLENGT 50
+#define MAXLENGTH 50
 
 //Variables del primer arbol
 #define TREE1_1 "Are you vegetarian?"
