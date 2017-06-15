@@ -35,7 +35,7 @@ void print_manual_tree(BinaryTree* tree);
  *  de forma apropiada el árbol.
  */
 void print_tree(BinaryTree* tree);
-void print_content(Binary* tree, int profundidad);
+void print_content(BinaryTree* tree, int profundidad);
 void tabular(int profundidad);
 
 
