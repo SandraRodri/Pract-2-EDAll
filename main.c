@@ -4,7 +4,7 @@
 
 int main(int argc, char** argv) {
     BinaryTree* tree;
-    char buffer[200];
+    char buffer[MAXLENGHT];
     int op;
     while (1) {
         //do{
