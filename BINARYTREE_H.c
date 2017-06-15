@@ -129,7 +129,7 @@ void tabular(int profundidad) {
 void print_content(BinaryTree* tree, int profundidad) {
     tabular(profundidad);
     if (tree->left == NULL && tree->right == NULL) {
-        printf("Le recomendamos %s\n", tree->data);
+        printf(" %s\n", tree->data);
         return;
     } else {
         profundidad++;
