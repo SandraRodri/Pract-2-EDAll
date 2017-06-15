@@ -12,9 +12,7 @@ BinaryTree* create_empty_tree() {
     return tree;
 }
 
-//Función principal del código, una vez reservada la memoria,creamos el arbol de tantas dimensiones como se desee, en nuestro caso, seran arboles fijos.
-//Esto es posible porque cada arbol( de un solo nodo)se va entrelazando a izquierda y derecha con los demás. 
-//Además, cada nodo tiene un data asignado,en este caso, son las preguntas o respuestas de los arboles que implementamos más adelante. 
+//Des de aquí llamamos a la función create_empty_tree.Una vez tenemos el nodo procedemos a introducir datos (apuntamos a izquierda o derecha, contenido) al nodo.
 
 BinaryTree* create_tree(BinaryTree* left, char* content, BinaryTree* right) {
     BinaryTree *tree;
