@@ -120,8 +120,11 @@ void tabular(int profundidad) {
         printf("\t");
     }
 }
-//Mostrar las preguntas y respuesta que se encuentran a cada nodo del arbol correspondiente,de manera recursiva, 
-//comprueba q no sea el ultimo elemeto en el caso de no serlo vamos a ambods lados del arbol
+
+//Muestra por pantalla el contenido del arbol con sus respectivas preguntas y respuestas sugeridas, de manera recursiva. 
+//El caso base será el final del árbol donde hay hojas(las respuestas sugeridas), es decir, es el ultimo elemento. 
+
+
 
 void print_content(BinaryTree* tree, int profundidad) {
     tabular(profundidad);
@@ -141,6 +144,7 @@ void print_content(BinaryTree* tree, int profundidad) {
 }
 
 // Mostramos por pantalla el arbol con todo su contenido en el caso de que esté lleno; si no es así advetimos al usuario que no existe el arbol.
+//Conseguimos que se muestre, accediendo a la función print_content(tree,0).
 void print_tree(BinaryTree* tree) {
     if (is_empty(tree) == TRUE) {
         printf("No tenemos arbol que mostrar");
@@ -149,7 +153,7 @@ void print_tree(BinaryTree* tree) {
     }
 }
 
-// El usuario elige como recorrer el arbol segun sus respuestas.según la respuesta que ha introducido el usuario (Si o No)
+//En caso de que el árbol esté lleno, el usuario elige como recorrer el arbol a ambos lados .según las respuesta que ha introducido el usuario (Si o No)
 void print_manual_tree(BinaryTree* tree){
     char opcion[50];
     if (is_empty(tree) == FALSE) {
