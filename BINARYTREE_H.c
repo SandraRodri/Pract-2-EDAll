@@ -151,7 +151,7 @@ void print_tree(BinaryTree* tree) {
     }
 }
 
-//En caso de que el árbol esté lleno, el usuario elige como recorrer el arbol a ambos lados .según las respuesta que ha introducido el usuario (Si o No)
+//En caso de que el árbol esté lleno, el usuario elige como recorrer el arbol a ambos lados, según las respuesta que ha introducido el usuario (Si o No)
 void print_manual_tree(BinaryTree* tree){
     char opcion[MAXLENGTH];
     if (is_empty(tree) == FALSE) {
