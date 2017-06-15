@@ -27,7 +27,7 @@ BinaryTree* left_tree(BinaryTree* tree);
 BinaryTree* right_tree(BinaryTree* tree); 
 char* get_content(BinaryTree* tree); 
 int is_empty(BinaryTree* tree);
-
+void print_manual_tree(BinaryTree* tree);
 
 /*
  * Tarea 3
@@ -50,6 +50,7 @@ BinaryTree* create_example1();
 BinaryTree* create_example2();
 //Option B
 BinaryTree* create_tree_from_string(char* strTree);
+
 
 #endif
 
