@@ -155,13 +155,21 @@ void print_tree(BinaryTree* tree) {
 
 //En caso de que el árbol esté lleno, el usuario elige como recorrer el arbol a ambos lados .según las respuesta que ha introducido el usuario (Si o No)
 void print_manual_tree(BinaryTree* tree){
-    char opcion[50];
+    char opcion[MAXLENGTH];
     if (is_empty(tree) == FALSE) {
         while (tree->left != NULL && tree->right != NULL) {
             printf("%s\n", tree->data);
-            printf("Si / No\n");
-            scanf("%s", opcion);
-            if (opcion == 'Si') {
+            while(1){
+                printf("Si o No\n");
+                scanf("%s", opcion);
+              if(strcmp(opcion, "Si") == 0 || strcmp(opcion, "si") == 0 || strcmp(opcion, "No") == 0 || strcmp(opcion, "no") == 0){
+                  break;
+              }
+              else{
+                  printf("Opcion incorrecta, vuelva a intentarlo\n");
+              }
+            }
+            if (strcmp(opcion, "Si") == 0 || strcmp(opcion, "si")) {
                 tree = left_tree(tree);
             } else {
                 tree = right_tree(tree);
